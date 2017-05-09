@@ -1,4 +1,4 @@
-package client;
+package star.xiaolei.client;
 
 import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;

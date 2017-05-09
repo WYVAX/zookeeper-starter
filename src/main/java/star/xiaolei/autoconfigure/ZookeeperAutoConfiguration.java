@@ -1,12 +1,13 @@
-package autoconfigure;
+package star.xiaolei.autoconfigure;
 
-import client.ZookeeperClientFactory;
+import star.xiaolei.client.ZookeeperClientFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import star.xiaolei.properties.ZookeeperProperties;
 
 /**
  * Created by 周高磊
@@ -25,7 +26,7 @@ public class ZookeeperAutoConfiguration {
 
     @Bean
     public ZookeeperClientFactory zookeeperClientFactory() throws Exception{
-        String connection = zookeeperProperties.getHost() + zookeeperProperties.getPort();
+        String connection = zookeeperProperties.getHost() + ":" + zookeeperProperties.getPort();
         return new ZookeeperClientFactory(connection);
     }
 

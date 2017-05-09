@@ -1,4 +1,4 @@
-package properties;
+package star.xiaolei.properties;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
