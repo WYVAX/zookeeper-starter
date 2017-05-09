@@ -8,27 +8,10 @@ package star.xiaolei.pubsub;
  */
 public class Paths {
 
-    //client
-    private final String clientBase;
-
-    //subscriber
-    private final String subscriberBase;
-
-    //topic
     private final String topicBase;
 
-    public Paths(String basePath, String topic) {
-        clientBase = basePath + "/clients";
-        subscriberBase = basePath + "subscribers" + topic;
-        topicBase = basePath + "topics" + topic;
-    }
-
-    public String getClientBase() {
-        return clientBase;
-    }
-
-    public String getSubscriberBase() {
-        return subscriberBase;
+    public Paths(String topic) {
+        topicBase = topic;
     }
 
     public String getTopicBase() {
